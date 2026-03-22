@@ -3,221 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DeployX Cloud | Private Infrastructure</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <style>
-        :root {
-            --gold: #d4af37;
-            --gold-glow: rgba(212, 175, 55, 0.3);
-            --bg: #050505;
-            --card: #0d0d0d;
-            --border: rgba(255, 255, 255, 0.05);
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; cursor: none; }
-        body {
-            background-color: var(--bg);
-            color: #fff;
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
-        }
-
-        /* --- CUSTOM CURSOR --- */
-        #cursor {
-            width: 20px; height: 20px;
-            background: var(--gold);
-            border-radius: 50%;
-            position: fixed;
-            pointer-events: none;
-            z-index: 9999;
-            mix-blend-mode: difference;
-            transition: transform 0.1s ease;
-        }
-
-        /* --- NAV BAR --- */
-        nav {
-            padding: 30px 8%;
-            display: flex; justify-content: space-between; align-items: center;
-            position: fixed; width: 100%; top: 0; z-index: 1000;
-            background: rgba(5,5,5,0.8); backdrop-filter: blur(20px);
-        }
-        .logo { font-family: 'Syncopate', sans-serif; font-weight: 700; font-size: 22px; letter-spacing: 2px; }
-        .logo span { color: var(--gold); }
-
-        /* --- HERO --- */
-        .hero {
-            height: 100vh; display: flex; flex-direction: column;
-            justify-content: center; align-items: center; text-align: center;
-            background: radial-gradient(circle at center, #111 0%, #050505 100%);
-        }
-        .hero h1 {
-            font-family: 'Syncopate', sans-serif;
-            font-size: clamp(2.5rem, 8vw, 5.5rem);
-            text-transform: uppercase; line-height: 1;
-            margin-bottom: 20px;
-        }
-        .gold-txt { color: var(--gold); text-shadow: 0 0 30px var(--gold-glow); }
-
-        .btn-luxury {
-            padding: 18px 45px;
-            border: 1px solid var(--gold);
-            background: transparent;
-            color: var(--gold);
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            border-radius: 0px; /* Sharp edges for luxury look */
-            transition: 0.5s;
-            position: relative;
-        }
-        .btn-luxury:hover {
-            background: var(--gold);
-            color: #000;
-            box-shadow: 0 0 50px var(--gold-glow);
-        }
-
-        /* --- NODES SECTION --- */
-        .section { padding: 120px 8%; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
-
-        .luxury-card {
-            background: var(--card);
-            border: 1px solid var(--border);
-            padding: 50px;
-            position: relative;
-            transition: 0.5s;
-        }
-        .luxury-card:hover {
-            border-color: var(--gold);
-            transform: translateY(-10px);
-        }
-        .luxury-card i { font-size: 3rem; color: var(--gold); margin-bottom: 20px; }
-        .luxury-card h3 { font-family: 'Syncopate', sans-serif; margin-bottom: 15px; }
-
-        /* --- OFFICIAL LINKS --- */
-        .links-panel {
-            background: #0a0a0a;
-            border: 1px solid var(--border);
-            padding: 40px;
-            max-width: 1000px; margin: 0 auto;
-        }
-        .link-row {
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 25px 0; border-bottom: 1px solid var(--border);
-        }
-        .link-row:last-child { border: none; }
-        .link-row h4 { font-size: 1.2rem; margin-bottom: 5px; }
-        .link-row p { color: #555; font-size: 0.9rem; }
-        .visit-link { color: var(--gold); text-decoration: none; font-weight: 700; border-bottom: 1px solid var(--gold); }
-
-        /* --- FOOTER --- */
-        footer {
-            padding: 100px 8% 50px; text-align: center;
-            border-top: 1px solid var(--border);
-        }
-        .footer-logo { font-family: 'Syncopate', sans-serif; font-size: 30px; margin-bottom: 20px; }
-
-    </style>
+    <title>X Cloud - Secure Cloud Storage</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-
-    <div id="cursor"></div>
-
-    <nav>
-        <div class="logo">DEPLOY<span>X</span></div>
-        <div style="display: flex; gap: 30px;">
-            <a href="https://go.deployx.cloud" style="color: #fff; text-decoration: none; font-weight: 600;">PANEL</a>
-            <a href="https://status.deployx.cloud" style="color: var(--gold); text-decoration: none; font-weight: 600;">STATUS</a>
-        </div>
-    </nav>
-
-    <section class="hero">
-        <div data-aos="fade-up">
-            <h1>Private <br><span class="gold-txt">Infrastructure</span></h1>
-            <p style="color: #666; max-width: 600px; margin: 20px auto 40px;">
-                DeployX Cloud – जहाँ रफ़्तार और प्राइवेसी का मिलन होता है। 
-                अपने प्रोजेक्ट्स को दुनिया के सबसे सुरक्षित सर्वर्स पर होस्ट करें।
-            </p>
-            <button class="btn-luxury">Explore Nodes</button>
-        </div>
-    </section>
-
-    <section class="section" id="nodes">
-        <div class="grid">
-            <div class="luxury-card" data-aos="fade-up">
-                <i class="fas fa-microchip"></i>
-                <h3>Minecraft <span class="gold-txt">Elite</span></h3>
-                <p style="color: #888; margin-bottom: 20px;">Ryzen 9 7950X, DDR5 RAM, और zero latency। प्रो गेमर्स के लिए बनाया गया।</p>
-                <div style="font-size: 2rem; font-weight: 800;">₹499 <span style="font-size: 1rem; color: #444;">/mo</span></div>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-cloud"></i>
+                    <span>X Cloud</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
-            <div class="luxury-card" data-aos="fade-up" data-aos-delay="200">
-                <i class="fas fa-server"></i>
-                <h3>Cloud <span class="gold-txt">VPS</span></h3>
-                <p style="color: #888; margin-bottom: 20px;">Enterprise-grade isolation के साथ अपना खुद का क्लाउड सर्वर चलाएं।</p>
-                <div style="font-size: 2rem; font-weight: 800;">₹1299 <span style="font-size: 1rem; color: #444;">/mo</span></div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Secure Cloud Storage<br><span class="highlight">X Cloud</span> ke saath</h1>
+            <p>Apne data ko safe rakhein. Unlimited storage, fast speed, aur top security.</p>
+            <div class="hero-buttons">
+                <a href="#pricing" class="btn btn-primary">Start Free</a>
+                <a href="#features" class="btn btn-secondary">Learn More</a>
             </div>
         </div>
-    </section>
-
-    <section class="section">
-        <h2 style="font-family: 'Syncopate', sans-serif; text-align: center; margin-bottom: 50px;">OFFICIAL <span class="gold-txt">DIRECTORY</span></h2>
-        <div class="links-panel" data-aos="zoom-in">
-            <div class="link-row">
-                <div>
-                    <h4>Main Website</h4>
-                    <p>https://deployx.cloud (Coming Soon)</p>
+        <div class="hero-image">
+            <div class="cloud-animation">
+                <i class="fas fa-cloud"></i>
+                <div class="file-upload">
+                    <i class="fas fa-upload"></i>
                 </div>
-                <a href="https://deployx.cloud" class="visit-link">VISIT</a>
-            </div>
-            <div class="link-row">
-                <div>
-                    <h4>Client Dashboard</h4>
-                    <p>https://dash.deployx.cloud (Coming Soon)</p>
-                </div>
-                <a href="https://dash.deployx.cloud" class="visit-link">ACCESS</a>
-            </div>
-            <div class="link-row">
-                <div>
-                    <h4>Billing Portal</h4>
-                    <p>https://billing.cloudex.cloud</p>
-                </div>
-                <a href="https://billing.cloudex.cloud" class="visit-link">PAYMENTS</a>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="footer-logo">DEPLOY<span>X</span></div>
-        <p style="color: #444;">Built for the next generation of developers.</p>
-        <p style="margin-top: 20px; color: var(--gold); font-size: 12px; letter-spacing: 5px;">STAY FAST • STAY SECURE</p>
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Why Choose X Cloud?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Bank Level Security</h3>
+                    <p>256-bit encryption se aapka data 100% safe.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Lightning Fast</h3>
+                    <p>CDN network se worldwide fast access.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Any Device</h3>
+                    <p>Phone, laptop, tablet - sabpe kaam karega.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-infinity"></i>
+                    <h3>Unlimited Storage</h3>
+                    <p>Koi limit nahi. Jitna chahiye utna store karo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2>Choose Your Plan</h2>
+            <div class="pricing-grid">
+                <div class="price-card">
+                    <h3>Free</h3>
+                    <div class="price">₹0<span>/month</span></div>
+                    <ul>
+                        <li>5GB Storage</li>
+                        <li>Basic Support</li>
+                        <li>Web Access</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Get Started</a>
+                </div>
+                <div class="price-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3>Pro</h3>
+                    <div class="price">₹99<span>/month</span></div>
+                    <ul>
+                        <li>Unlimited Storage</li>
+                        <li>Priority Support</li>
+                        <li>Mobile App</li>
+                        <li>Team Sharing</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Get Started</a>
+                </div>
+                <div class="price-card">
+                    <h3>Enterprise</h3>
+                    <div class="price">₹499<span>/month</span></div>
+                    <ul>
+                        <li>Custom Storage</li>
+                        <li>24/7 Support</li>
+                        <li>API Access</li>
+                        <li>Dedicated Server</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get Started Today</h2>
+            <p>X Cloud ke saath apna free account banayein!</p>
+            <form class="contact-form">
+                <input type="email" placeholder="Apna email dalein" required>
+                <button type="submit" class="btn btn-primary">Start Free Trial</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-cloud"></i>
+                    <span>X Cloud</span>
+                </div>
+                <p>&copy; 2024 X Cloud. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ duration: 1200 });
-
-        // Custom Cursor Logic
-        const cursor = document.getElementById('cursor');
-        document.addEventListener('mousemove', e => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-        });
-
-        // Hover Effect for Cursor
-        document.querySelectorAll('a, button, .luxury-card').forEach(item => {
-            item.addEventListener('mouseenter', () => {
-                cursor.style.transform = 'scale(3)';
-                cursor.style.background = 'white';
-            });
-            item.addEventListener('mouseleave', () => {
-                cursor.style.transform = 'scale(1)';
-                cursor.style.background = 'var(--gold)';
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
